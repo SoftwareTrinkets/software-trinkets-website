@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BabylonJS on Software Trinkets</title>
+    <link>/tags/babylonjs/</link>
+    <description>Recent content in BabylonJS on Software Trinkets</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 13 Dec 2022 08:46:50 +0100</lastBuildDate><atom:link href="/tags/babylonjs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating a casual game with BabylonJS</title>
+      <link>/posts/babylonjs/</link>
+      <pubDate>Tue, 13 Dec 2022 08:46:50 +0100</pubDate>
+      
+      <guid>/posts/babylonjs/</guid>
+      <description>Introduction&gt; Introduction # Like many others, I&amp;rsquo;ve always had the dream to develop games, but I&amp;rsquo;ve also have fallen into the very common trap of exploding the scope of the game I&amp;rsquo;m trying to make and then not being able to finish that project.</description>
+    </item>
+    
+  </channel>
+</rss>
