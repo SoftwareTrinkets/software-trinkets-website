@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on Software Trinkets</title>
-    <link>https://softwaretrinkets.github.io/software-trinkets-website/authors/</link>
+    <link>https://softwaretrinkets.github.io/authors/</link>
     <description>Recent content in Authors on Software Trinkets</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://softwaretrinkets.github.io/software-trinkets-website/authors/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://softwaretrinkets.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
