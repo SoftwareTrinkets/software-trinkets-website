@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Software Trinkets</title>
-    <link>https://softwaretrinkets.github.io/posts/</link>
+    <link>https://softwaretrinkets.github.io/software-trinkets-website/posts/</link>
     <description>Recent content on Software Trinkets</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 13 Dec 2022 08:46:50 +0100</lastBuildDate><atom:link href="https://softwaretrinkets.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Dec 2022 08:46:50 +0100</lastBuildDate><atom:link href="https://softwaretrinkets.github.io/software-trinkets-website/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating a casual game with BabylonJS</title>
-      <link>https://softwaretrinkets.github.io/posts/babylonjs/</link>
+      <link>https://softwaretrinkets.github.io/software-trinkets-website/posts/babylonjs/</link>
       <pubDate>Tue, 13 Dec 2022 08:46:50 +0100</pubDate>
       
-      <guid>https://softwaretrinkets.github.io/posts/babylonjs/</guid>
-      <description>Introduction&gt; Introduction # Like many others, I&amp;rsquo;ve always had the dream to develop games, but I&amp;rsquo;ve also have fallen into the very common trap of exploding the scope of the game I&amp;rsquo;m trying to make and then not being able to finish that project.</description>
+      <guid>https://softwaretrinkets.github.io/software-trinkets-website/posts/babylonjs/</guid>
+      <description>Introduction Like many others, I&amp;rsquo;ve always had the dream to develop games, but I&amp;rsquo;ve also have fallen into the very common trap of exploding the scope of the game I&amp;rsquo;m trying to make and then not being able to finish that project.</description>
     </item>
     
     <item>
       <title>Creating a site using Hugo</title>
-      <link>https://softwaretrinkets.github.io/posts/my-first-post/</link>
+      <link>https://softwaretrinkets.github.io/software-trinkets-website/posts/my-first-post/</link>
       <pubDate>Sun, 11 Dec 2022 18:28:37 +0100</pubDate>
       
-      <guid>https://softwaretrinkets.github.io/posts/my-first-post/</guid>
-      <description>Introduction&gt; Introduction # Hello and welcome! This is the first post in this blog. This blog is meant as a way for me to keep track of all the little projects I want to do, and how those projects went.</description>
+      <guid>https://softwaretrinkets.github.io/software-trinkets-website/posts/my-first-post/</guid>
+      <description>Introduction Hello and welcome! This is the first post in this blog. This blog is meant as a way for me to keep track of all the little projects I want to do, and how those projects went.</description>
     </item>
     
   </channel>
