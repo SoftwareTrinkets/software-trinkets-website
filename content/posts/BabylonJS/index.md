@@ -20,7 +20,7 @@ My goal is to have the game loop figured out through the Playground, and then mo
 
 Here's my starting place: 
 
-![Playground](/Playground-1.png)
+![Playground](Playground-1.png)
 
 You can run this in your browser through this link: https://playground.babylonjs.com/#DSH9NF 
 
@@ -31,14 +31,14 @@ The cube would stay mostly in the same place, moving from side to side. Now that
 The scolling environment is going to be more cubes. First, I'm going to make just one. Make it a different color than the 'player', a random color for now. 
 With Babylon you don't have an `Update()` function, you have observables. Those can be either on the scene object or on the created objects themselves. As far as I know there's no disadvantage to doing it on the object itself, so I'm going to be doing that. First making just one environment cube that scrolls under the player cube.
 
-![Playground](/Playground-2.png)
+![Playground](Playground-2.png)
 
 Here's the playground link for it: https://playground.babylonjs.com/#DSH9NF#1
 
 The next step is to expand on that first scrolling cube and create a bunch of them. This wasn't as easy as I'd hoped by just putting the code I used for the one in a for loop. I ended up having to use the scene `onBeforeRenderObservable` and create a seperate loop to set them all. When I tried just looping my first implementation the references didn't get saved and only one of the x cubes would move. 
 So I created two loops, one to create the environment scrolling boxes, and one to add them to the update loop. I also added some variables outside of these loops so I could control the number of scrolling boxes. Each cube also has a random shade of green to keep it visually interesting. 
 
-![Playground](/Playground-3.png)
+![Playground](Playground-3.png)
 
 https://playground.babylonjs.com/#DSH9NF#2
 
@@ -46,14 +46,14 @@ https://playground.babylonjs.com/#DSH9NF#2
 
 Next is input, I want to experiment with a few things but the basic functionality is to get the cube in one of three positions so it can be on the scrolling cubes. So here I've mapped the positions to the 1, 2 and 3 keys. 
 
-![Playground](/Playground-4.png)
+![Playground](Playground-4.png)
 
 
 https://playground.babylonjs.com/#DSH9NF#3
 
 And next, smoother movement. Instead of the cube hopping from place to place, we'll add an animation so it moves there in a few frames. I used a built in function to create a new animation instead of defining key frames myself. This might cause a new animation being made and hanging around every time the user presses a key... But that seems like a perfect problem for future me to solve. 
 
-![Playground](/Playground-5.png)
+![Playground](Playground-5.png)
 
 https://playground.babylonjs.com/#DSH9NF#4
 
@@ -76,7 +76,7 @@ I want to avoid using physics just yet, since they add a lot of bloat to a proje
 
 Then using Babylon GUI to get it on screen, I figured top middle was a good place for it since we're not going to be having a lot of other UI. This score is currently only going up, so we need to figure out how to check if there's no platform underneath the player. Without collisions this was a bit of a puzzle, but we have both `OnIntersectionEnterTrigger` and `OnIntersectionExitTrigger`, so I ended up just adding a counter. It counts up when `OnIntersectionEnterTrigger` is called and subtracts when `OnIntersectionExitTrigger` is called. Then, in the `onBeforeRenderObservable`, I also count how long this has been zero. If it's been 0 for longer than 30 frames I reset the score to 0.
 
-![Playground](/Playground-6.png)
+![Playground](Playground-6.png)
 
 https://playground.babylonjs.com/#DSH9NF#5
 
@@ -96,7 +96,7 @@ Okay, I got lost in particle systems for a few days and in the end it looked ter
 
 Time sure flies when you're working out if the little game you've made is actually fun. But this was meant to be a quick project so this is just what it's going to be. 
 
-![Playground](/Playground-7.png)
+![Playground](Playground-7.png)
 
 https://playground.babylonjs.com/#DSH9NF#6
 
@@ -104,7 +104,7 @@ https://playground.babylonjs.com/#DSH9NF#6
 
 Okay, so the plan was to stop it there, but then I played it some more, and a bit longer and I found out that the framerate just slows down after a while. When looking with the debug tools, it was obvious that it was happening immidately when starting the game, even if you didn't do anything...
 
-![DebugStep](/DebugStep-1.png)
+![DebugStep](DebugStep-1.png)
 
 Now, since I wrote and build this almost at the same time, maybe you've spotted my big mistake already. It's between https://playground.babylonjs.com/#DSH9NF#5 and https://playground.babylonjs.com/#DSH9NF#6. I'm not exactly sure how, but I probably misplaced a bracket, so now every frame it was registering a new action for the trigger of the box... 
 What was helpful here was the absolute framecount, since in the regular fps counter at the bottom of the playground would show a clean 60 fps for the first few minutes to only then drop. This is why I continued on without an idea that there was something wrong. 
@@ -284,7 +284,7 @@ In the end, I'm left with a small game that I'm quite content with. Here's all t
 
 And here's my highscore :D 
 
-![Highscore](/Highscore.png)
+![Highscore](Highscore.png)
 
 ## Conclusion
 

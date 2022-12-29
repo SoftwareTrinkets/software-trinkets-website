@@ -1,11 +1,16 @@
 ---
 title: "Publishing a website created through Hugo"
 date: 2022-12-28T22:55:37+01:00
+tags:
+  - Hugo
+  - GitHub Actions
+  - Domain
 draft: true
+
 ---
 
 After creating this site I've been changing what I want it to look like, created a logo, finished a second post so it wouldn't be that empty when I launched it. But after all that procrastination it was time to get it online. I didn't think this would be too big a deal, but honestly, it took me longer than expected.
-In this post I'll go through what the original plan was, 
+
 
 ## The plan
 
@@ -36,7 +41,7 @@ HOWEVER
 
 For me, I thought this would be it, set it and forget it. But nothing worked, I only saw raw HTML and a bunch of 404 that it couldn't find files that should just be there. I could see them in the branch, but they couldn't be found for some reason. 
 
-![404](/PublishedSite404.png)
+![404](PublishedSite404.png)
 
 ## Set the baseURL in the config.toml
 
@@ -57,19 +62,19 @@ https://github.com/actions/checkout/discussions/405
 
 Which is discussing the exact thing I want to do here. In case this is the first time you're dealing with automation, here's what you do. First, go to the Actions tab in GitHub:
 
-![Automation1](/Automation-1.png)
+![Automation1](Automation-1.png)
 
 On this page, you can create a new workflow by clicking **New workflow**
 
-![Automation2](/Automation-2.png)
+![Automation2](Automation-2.png)
 
 Next, select **set up a workflow yourself**, this will create a `main.yml` for your automation
 
-![Automation3](/Automation-3.png)
+![Automation3](Automation-3.png)
 
 In this file, put I just put the automation from the [github actions thread](https://github.com/actions/checkout/discussions/405).
 
-![Automation4](/Automation-4.png)
+![Automation4](Automation-4.png)
 
 
     name: Deploy Site
