@@ -17,19 +17,19 @@ This turned out to be a little more tricky than I anticipated, so it seemed like
 
 I've never registered a domain name before, I know, embarrassing. Better late than never though, but it was still a bit daunting. Apparently you can't just google or check the domains, just in case something is watching for that and getting it before you can. So you have to do a terminal check for the domain you want, see if it returns anything. 
 `nslookup www.yourdomain.something`
-After checking that the domain was still available I went to the organisation that manages names in the Netherlands. https://www.sidn.nl. I'm going for a .nl domain, since that's very cheap and good enough for my purposes. The first year of this domain will cost me roughly 1 Euro, hard to beat that kind of price. After that it's about 10 Euro. 
+After checking that the domain was still available I went to the organization that manages names in the Netherlands. https://www.sidn.nl. I'm going for a .nl domain, since that's very cheap and good enough for my purposes. The first year of this domain will cost me roughly 1 Euro, hard to beat that kind of price. After that it's about 10 Euro. 
 Something that's also good to keep in mind, there's cheap options where you get both hosting and they'll get a domain name for you. However, after that you don't own the domain name, and if you want to switch to another service you're basically out of luck. So you need a [registrar](https://en.wikipedia.org/wiki/Domain_name_registrar) to manage all that yourself. 
 
 ## Getting the site on GitHub Pages
 
 After getting the domain, I thought something low-stakes would be to get the site on 'GitHub Pages' page first. 
-Getting a page on [GitHub pages](https://pages.github.com) is actually pretty easy. Once you have the website comitted to GitHub you can go into settings and set a branch to go to the 'GitHub Pages' page. 
+Getting a page on [GitHub pages](https://pages.github.com) is actually pretty easy. Once you have the website committed to GitHub you can go into settings and set a branch to go to the 'GitHub Pages' page. 
 
-Running `hugo` in your project folder will generate your static website in the `public` folder. You can then put this on a seperate branch and set the GitHub Pages settings to start there. 
+Running `hugo` in your project folder will generate your static website in the `public` folder. You can then put this on a separate branch and set the GitHub Pages settings to start there. 
 
 HOWEVER
 
-After putting the generated site on the seperate branch I thought this would be it, set it and forget it. But nothing worked, I only saw raw HTML and a bunch of 404's. I could see the files in the branch, but they couldn't be found for some reason. 
+After putting the generated site on the separate branch I thought this would be it, set it and forget it. But nothing worked, I only saw raw HTML and a bunch of 404's. I could see the files in the branch, but they couldn't be found for some reason. 
 
 ![404](PublishedSite404.png)
 
@@ -40,7 +40,7 @@ For GitHub Pages you need both the domain and the repo name, so in my case that 
     
     baseURL = "https://softwaretrinkets.github.io/software-trinkets-website/"
 
-After I got that right, I was able to see the site correctly. I did get into trouble with my themes folder dissapearing when I switched to put a new version on the gh-pages branch. Which leads us directly to the next point.
+After I got that right, I was able to see the site correctly. I did get into trouble with my themes folder disappearing when I switched to put a new version on the gh-pages branch. Which leads us directly to the next point.
 
 ## Automating 
 

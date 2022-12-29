@@ -9,7 +9,7 @@ tags:
 
 ## Introduction
 
-Like many others, I've always had the dream to develop games, but I've also have fallen into the very common trap of exploding the scope of the game I'm trying to make and then not being able to finish that project. In an attempt to avoid this, I want to create a very simple casual game with minimal graphics and an easy gameloop.
+Like many others, I've always had the dream to develop games, but I've also have fallen into the very common trap of exploding the scope of the game I'm trying to make and then not being able to finish that project. In an attempt to avoid this, I want to create a very simple casual game with minimal graphics and an easy game loop.
 In this post I'm going to document the process of making such a game, how to come up with an idea, the execution of that idea and the hurdles I come across along the way.
 
 ## A hyper casual game
@@ -28,14 +28,14 @@ The cube would stay mostly in the same place, moving from side to side. Now that
 
 ## The scrolling environment
 
-The scolling environment is going to be more cubes. First, I'm going to make just one. Make it a different color than the 'player', a random color for now. 
+The scrolling environment is going to be more cubes. First, I'm going to make just one. Make it a different color than the 'player', a random color for now. 
 With Babylon you don't have an `Update()` function, you have observables. Those can be either on the scene object or on the created objects themselves. As far as I know there's no disadvantage to doing it on the object itself, so I'm going to be doing that. First making just one environment cube that scrolls under the player cube.
 
 ![Playground](Playground-2.png)
 
 Here's the playground link for it: https://playground.babylonjs.com/#DSH9NF#1
 
-The next step is to expand on that first scrolling cube and create a bunch of them. This wasn't as easy as I'd hoped by just putting the code I used for the one in a for loop. I ended up having to use the scene `onBeforeRenderObservable` and create a seperate loop to set them all. When I tried just looping my first implementation the references didn't get saved and only one of the x cubes would move. 
+The next step is to expand on that first scrolling cube and create a bunch of them. This wasn't as easy as I'd hoped by just putting the code I used for the one in a for loop. I ended up having to use the scene `onBeforeRenderObservable` and create a separate loop to set them all. When I tried just looping my first implementation the references didn't get saved and only one of the x cubes would move. 
 So I created two loops, one to create the environment scrolling boxes, and one to add them to the update loop. I also added some variables outside of these loops so I could control the number of scrolling boxes. Each cube also has a random shade of green to keep it visually interesting. 
 
 ![Playground](Playground-3.png)
@@ -102,12 +102,12 @@ https://playground.babylonjs.com/#DSH9NF#6
 
 ## Lol, there's some serious bugs
 
-Okay, so the plan was to stop it there, but then I played it some more, and a bit longer and I found out that the framerate just slows down after a while. When looking with the debug tools, it was obvious that it was happening immidately when starting the game, even if you didn't do anything...
+Okay, so the plan was to stop it there, but then I played it some more, and a bit longer and I found out that the framerate just slows down after a while. When looking with the debug tools, it was obvious that it was happening immediately when starting the game, even if you didn't do anything...
 
 ![DebugStep](DebugStep-1.png)
 
 Now, since I wrote and build this almost at the same time, maybe you've spotted my big mistake already. It's between https://playground.babylonjs.com/#DSH9NF#5 and https://playground.babylonjs.com/#DSH9NF#6. I'm not exactly sure how, but I probably misplaced a bracket, so now every frame it was registering a new action for the trigger of the box... 
-What was helpful here was the absolute framecount, since in the regular fps counter at the bottom of the playground would show a clean 60 fps for the first few minutes to only then drop. This is why I continued on without an idea that there was something wrong. 
+What was helpful here was the absolute frame count, since in the regular fps counter at the bottom of the playground would show a clean 60 fps for the first few minutes to only then drop. This is why I continued on without an idea that there was something wrong. 
 
 Another thing that I encountered while trying to fix that bug was that I had, for some reason, used `var` instead of `const` or `let`. So for my first fix attempt my coloring animations between the environment cube and the player cube went wrong. It would only take the color of one environment cube, the last one. I kind of expected a problem like this, but not enough to actually change the `var`s. But it was fixed by changing the `var` to a `let`. 
 
