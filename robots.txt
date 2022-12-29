@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://softwaretrinkets.github.io/software-trinkets-website/sitemap.xml
