@@ -6,29 +6,20 @@ tags:
   - GitHub Actions
   - Domain
 draft: true
-
 ---
 
-After creating this site I've been changing what I want it to look like, created a logo, finished a second post so it wouldn't be that empty when I launched it. But after all that procrastination it was time to get it online. I didn't think this would be too big a deal, but honestly, it took me longer than expected.
-
-
-## The plan
-
-So the plan was the following:
-
-- Think of a name.
-- Register a domain name.
-- Use an email address connected to that domain name to create a new GitHub page (since my normal email is already attached to an account there)
-- Create a new GitHub repo with all this code on it.
-- Set up GitHub Pages with the generated site
-- Route this to my custom domain
+After creating this site I've been changing what I want it to look like, created a logo, finished a second post so it wouldn't be that empty when I launched it. But after all that procrastination it was time to get it online. 
+This turned out to be a little more tricky than I anticipated, so it seemed like a perfect thing to write another blog post about. In this post I'll document:
+- How I went from a local running Hugo generated website to hosting it through GitHub Pages 
+- Creating the automation to build it all through GitHub instead of locally 
+- Setting it up through my custom domain. 
 
 ## The reality
 
 I've never registered a domain name before, I know, embarrassing. Better late than never though, but it was still a bit daunting. Apparently you can't just google or check the domains, just in case something is watching for that and getting it before you can. So you have to do a terminal check for the domain you want, see if it returns anything. 
-`TODO: The way to check here`
+`nslookup www.yourdomain.something`
 After checking that the domain was still available I went to the organisation that manages names in the Netherlands. https://www.sidn.nl. I'm going for a .nl domain, since that's very cheap and good enough for my purposes. The first year of this domain will cost me roughly 1 Euro, hard to beat that kind of price. After that it's about 10. 
-Something that's also good to keep in mind, there's cheap options where you get both hosting and they'll get a domain name for you. However, after that you don't own the domain name, and if you want to switch to another service you're basically out of luck.
+Something that's also good to keep in mind, there's cheap options where you get both hosting and they'll get a domain name for you. However, after that you don't own the domain name, and if you want to switch to another service you're basically out of luck. So you need a [registrar](https://en.wikipedia.org/wiki/Domain_name_registrar) to manage all that yourself. 
 
 ## Getting the site on GitHub Pages
 
@@ -154,3 +145,11 @@ The last step is to connect the site hosted on GitHub to my custom domain (www.s
 ![CustomDomain1](CustomDomain-1.png)
 
 After which I followed [this guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site) on how to set up my DNS settings. 
+Changing something about DNS settings is going to take a while to take effect, so after I added the CNAME to a template in the DNS settings I basically had to hope I did it right and wait for up to 24 hours. 
+If you did it right, you should see the CNAME added when you run:
+
+    dig www.yourdomain.something +nostats +nocomments +nocmd
+
+After about 5 hours, it updated and it turns out I also needed to configure an apex domain. From the documentation I thought it was optional, but I guess not. Since it gave me the following error when I tried adding the domain again.
+
+![Github](Github-1.png)
