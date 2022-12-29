@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Software Trinkets</title>
-    <link>https://softwaretrinkets.github.io/tags/</link>
+    <link>https://softwaretrinkets.github.io/software-trinkets-website/tags/</link>
     <description>Recent content in Tags on Software Trinkets</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 13 Dec 2022 08:46:50 +0100</lastBuildDate><atom:link href="https://softwaretrinkets.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Dec 2022 08:46:50 +0100</lastBuildDate><atom:link href="https://softwaretrinkets.github.io/software-trinkets-website/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>BabylonJS</title>
-      <link>https://softwaretrinkets.github.io/tags/babylonjs/</link>
+      <link>https://softwaretrinkets.github.io/software-trinkets-website/tags/babylonjs/</link>
       <pubDate>Tue, 13 Dec 2022 08:46:50 +0100</pubDate>
       
-      <guid>https://softwaretrinkets.github.io/tags/babylonjs/</guid>
+      <guid>https://softwaretrinkets.github.io/software-trinkets-website/tags/babylonjs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Game</title>
-      <link>https://softwaretrinkets.github.io/tags/game/</link>
+      <link>https://softwaretrinkets.github.io/software-trinkets-website/tags/game/</link>
       <pubDate>Tue, 13 Dec 2022 08:46:50 +0100</pubDate>
       
-      <guid>https://softwaretrinkets.github.io/tags/game/</guid>
+      <guid>https://softwaretrinkets.github.io/software-trinkets-website/tags/game/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Playground</title>
-      <link>https://softwaretrinkets.github.io/tags/playground/</link>
+      <link>https://softwaretrinkets.github.io/software-trinkets-website/tags/playground/</link>
       <pubDate>Tue, 13 Dec 2022 08:46:50 +0100</pubDate>
       
-      <guid>https://softwaretrinkets.github.io/tags/playground/</guid>
+      <guid>https://softwaretrinkets.github.io/software-trinkets-website/tags/playground/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Go</title>
-      <link>https://softwaretrinkets.github.io/tags/go/</link>
+      <link>https://softwaretrinkets.github.io/software-trinkets-website/tags/go/</link>
       <pubDate>Sun, 11 Dec 2022 18:28:37 +0100</pubDate>
       
-      <guid>https://softwaretrinkets.github.io/tags/go/</guid>
+      <guid>https://softwaretrinkets.github.io/software-trinkets-website/tags/go/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>https://softwaretrinkets.github.io/tags/hugo/</link>
+      <link>https://softwaretrinkets.github.io/software-trinkets-website/tags/hugo/</link>
       <pubDate>Sun, 11 Dec 2022 18:28:37 +0100</pubDate>
       
-      <guid>https://softwaretrinkets.github.io/tags/hugo/</guid>
+      <guid>https://softwaretrinkets.github.io/software-trinkets-website/tags/hugo/</guid>
       <description></description>
     </item>
     
