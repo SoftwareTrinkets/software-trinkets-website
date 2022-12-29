@@ -146,3 +146,11 @@ Since Hugo is a pretty big static site generation framework, someone already mad
             publish_branch: gh-pages
 
 And **BAM**, now I only have to push my content to the repo, and it will automatically build a new website, and deploy it to GitHub Pages. Even though it wasn't that much work to set up this automation, it'll save me so much time now that I don't have to copy over the public folder to a branch myself. With the added benefit that I don't even have to build locally anymore. 
+
+## Configuring my own domain
+
+The last step is to connect the site hosted on GitHub to my custom domain (www.softwaretrinkets.nl), I first set this in the settings of my repo:
+
+![CustomDomain1](CustomDomain-1.png)
+
+After which I followed [this guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site) on how to set up my DNS settings. 
