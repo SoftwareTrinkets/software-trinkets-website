@@ -1,4 +1,4 @@
-name: Deploy Site
+name: Run Hugo and deploy to branch
 
 on:
   workflow_dispatch:
@@ -14,6 +14,13 @@ jobs:
     steps:
     - name: Perform Checkout
       uses: actions/checkout@v2
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: '0.108.0'
+        # extended: true
+    - name: Build
+      run: hugo --minify
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
