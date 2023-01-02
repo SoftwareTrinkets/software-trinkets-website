@@ -1,5 +1,5 @@
 ---
-title: "Let's create a new game"
+title: "Let's create another game"
 date: 2022-12-30T15:00:08+01:00
 draft: true
 ---
@@ -33,7 +33,7 @@ This seems doable right? Here's my plan:
 1. Add an object in the middle of this canvas (the star)
 1. Add a spaceship object
 1. Add controls to the ship
-1. Add gravity to the start, and have this affect the spaceship
+1. Add gravity to the star, and have this affect the spaceship
 
 And after we've done that we'll see where to go from there. 
 
@@ -200,3 +200,118 @@ I'm so happy with this, look at it! It's beautiful. I've also the option to pres
 
 ## Gravity 
 
+Since we're making a space game, the gravity doesn't come from below. This means the added force can't just come from using the global up vector. It's different for every point in the scene. The good news is that I can use the math we just did to calculate the gravity direction. Then add in the distance from the ship to the sun and we're done.
+With this new gravity, I also wanted to be able to orbit the star without having to constantly turn or add power. To do this, the power now stays and you have to 'break' to go slower. The same with steering.
+
+    wedge.speed = 0;
+    const keyObjectUp = keyboard("w");
+    keyObjectUp.press = () => {
+        wedge.accelerate = true;
+    };
+    keyObjectUp.release = () => {
+        wedge.accelerate = false;
+    };
+    
+    const keyObjectDown = keyboard("s");
+    keyObjectDown.press = () => {
+        wedge.decelerate = true;
+    };
+    keyObjectDown.release = () => {
+        wedge.decelerate = false;
+    };
+    
+    const keyObjectLeft = keyboard("a");
+    keyObjectLeft.press = () => {
+        wedgeRotation--;
+    };
+    const keyObjectRight = keyboard("d");
+    keyObjectRight.press = () => {
+        wedgeRotation++;
+    };
+    const keyObjectSpace = keyboard(" ");
+    keyObjectSpace.press = () => {
+        wedge.x = 325;
+        wedge.y = 350;
+    };
+
+    app.ticker.add((delta) => {
+        if(wedge.accelerate === true && wedge.speed < 10){
+            wedge.speed += delta / 10;
+        } 
+        if (wedge.decelerate === true && wedge.speed > 0){
+            wedge.speed -= delta / 10;
+        }
+        if(wedge.speed < 0){
+            wedge.speed = 0;
+        }
+        wedge.angle += (wedgeRotation * (delta));
+
+        const angleToStar = angle(wedge.x, wedge.y, star.x, star.y) ;
+        const gravity = {x: Math.cos(angleToStar), y:Math.sin(angleToStar)}
+        const direction = {
+            x: Math.cos(wedge.rotation), 
+            y: Math.sin(wedge.rotation) 
+        };
+        const distance = Math.sqrt(
+            Math.pow(star.x - wedge.x, 2) + 
+            Math.pow(star.y - wedge.y, 2)
+        )
+
+        if (distance > 1){
+            const gravityByDistance = {
+                x: (gravity.x * ((1/distance))) * 40, 
+                y: (gravity.y * ((1/distance))) * 40 
+            }
+            wedge.x += (direction.x * wedge.speed) + gravityByDistance.x;
+            wedge.y += (direction.y * wedge.speed) + gravityByDistance.y;
+        }
+    });
+
+## Shooting
+
+Shooting turned out to be very easy, I was thinking I had to make a whole collision detection thing. But when I looked at [this example](https://pixijs.io/examples/#/demos-advanced/collision-detection.js) I realized that all that collision detection really is, is a distance measurement. For the shooting, I created a function that created the 'bullets' or whatever you want to call the blibs. 
+
+    function shoot(startPoint){
+        const startGraphics  = new PIXI.Graphics();
+        startGraphics.beginFill(0xccffcc);
+        startGraphics.drawCircle(startPoint.x, startPoint.y, 2);
+        startGraphics.endFill();
+        var texture = app.renderer.generateTexture(startGraphics);
+        const shot = new PIXI.Sprite(texture);
+        shot.x = startPoint.x;
+        shot.y = startPoint.y;
+        app.stage.addChild(shot)
+        return shot;
+    }
+
+Then adding each of these to an array
+
+    const newBullet = shoot({x: needle.x , y: needle.y })
+    const direction = {
+        x: Math.cos(needle.rotation), 
+        y: Math.sin(needle.rotation) 
+    };
+    bullets.push({sprite: newBullet, direction: direction, target: wedge });
+
+And then looping through them all, to update the location of each one, and checking if any one of them hit their target yet
+
+    bullets.forEach((current, i) => {
+        current.sprite.x += (current.direction.x * (delta * 3));
+        current.sprite.y += (current.direction.y * (delta * 3));
+        const notInView = current.sprite.x > app.view.width || current.sprite.y > app.view.height || current.sprite.x < 0 || current.sprite.y < 0;
+        const hitTarget = Math.sqrt(Math.pow(current.sprite.x - current.target.x, 2) + Math.pow(current.sprite.y - current.target.y, 2)) < 5;
+        if(notInView || hitTarget){
+            app.stage.removeChild(current.sprite);
+            bullets.splice(i, 1);
+        }
+    });
+
+## Adding a mask
+
+This is really starting to look like something now, so I wanted to start on the finishing touches. Currently, the canvas is still square, but apparently with masks it's possible to hide that. And it turns out, yeah, that's a super easy thing to do. Took me like a minute to find and implement. I don't even have to add a new thing for it. Setting the `.mask` property of every object in my scene to the `backgroundgraphic` variable I still had around just does the trick. Done.
+
+![demo](./spacewar-demo.mov)
+
+## Consequences
+
+Can't have actions without consequences, currently while I do check if the bullets have hit the target, there's no consequence for a bullet hitting. For now, I'll make the hit ship disappear. This should also happen when the ship hits the sun in the middle of the circle. Since I already do distance checks for these cases, I can easily tack this onto the existing stuff. 
