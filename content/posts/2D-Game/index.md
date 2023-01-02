@@ -39,14 +39,14 @@ And after we've done that we'll see where to go from there.
 
 ## Creating a circular canvas
 
-First off, making a canvas at all. I used the code from the [getting started guide](https://pixijs.io/guides/basics/getting-started.html). However, I'm not using any server yet, I want to see how far I can get with just an HTML page. 
+First off, making a canvas at all. I used the code from the [getting started guide](https://pixijs.io/guides/basics/getting-started.html). It also mentions setting up a server. However, I'm not using any server yet, I want to see how far I can get with just a HTML page. 
 I've not found a way to make the canvas circular so I'm just going to make a square canvas and see if it can be partly transparent next.
 
 First thing was making the background transparent. This wasn't necessarily hard, but there were a number of different answers out there that didn't work for me. This worked though:
 
     let app = new PIXI.Application({ width: 640, height: 640, backgroundAlpha: 0});
 
-So, using that getting started guide, and the transparent background thing. I ended up with this to render my background:
+So, using the [getting started guide](https://pixijs.io/guides/basics/getting-started.html), and the transparent background thing. I ended up with this to render my background:
 
     <!doctype html>
     <html>
@@ -91,7 +91,7 @@ I know, these kinds of graphics just blow your mind right? Jokes aside, I gave i
 Since PixiJS isn't an engine, it doesn't really include a lot of the stuff that I'm used to when making games. Input handling is one of them, apparently you can just use the 'normal' page key events for this though. For my project, I want to be able to move the wedge in a direction, and rotate it. 
 I found [this amazing tutorial](https://github.com/kittykatattack/learningPixi#keyboard) that has something specifically for handling input. This is basically all you need if you want to use specific keys to make your sprite go into a specific direction. However, I wanted to have my wedge move into the direction it was pointing at. To my surprise, I found out from my frantic googling that this kind of thing is where you're just really on your own in this framework. I would have to do the math, and I honestly don't think I've ever had to do that before. I usually just count on the local coordinate system of whatever engine I'm using. 
 
-Now, I could probably hack something together to give me this, maybe a container, rotate that, and use a coordinate system there? But since this is also supposed to be a learning opportunity for me (and I'm frankly embarrassed that I don't know this top of mind) I set out to implement this myself. It turned out to be honestly shockingly simple, all I needed to do was figure out the direction from the angle I'm setting the wedge at. I found this [math stackexchange answer](https://math.stackexchange.com/questions/180874/convert-angle-radians-to-a-heading-vector) and implemented it in what I had set up.
+Now, I could probably hack something together to give me this, maybe a container, rotate that, and use a coordinate system there? But since this is also supposed to be a learning project for me (and I'm frankly embarrassed that I don't know this top of mind) I set out to implement this myself. It turned out to be honestly shockingly simple, all I needed to do was figure out the direction from the angle I'm setting the wedge at. I found this [math stackexchange answer](https://math.stackexchange.com/questions/180874/convert-angle-radians-to-a-heading-vector) and implemented it in what I had set up.
 
     app.ticker.add((delta) => {
         wedge.angle += wedge.VAngle;
@@ -196,7 +196,7 @@ All in all, this is what I've created thus far (I've taken out [the copied over 
     </body>
     </html>
 
-I'm so happy with this, look at it! It's beautiful. I've also the option to press the spacebar to reset the wedge position, since I ended up losing it off the canvas a few times. 
+I'm so happy with this, look at it! It's beautiful. I've also added the option to press the spacebar to reset the wedge position, since I ended up losing it off the canvas a few times. 
 
 ## Gravity 
 
@@ -293,7 +293,7 @@ Then adding each of these to an array
     };
     bullets.push({sprite: newBullet, direction: direction, target: wedge });
 
-And then looping through them all, to update the location of each one, and checking if any one of them hit their target yet
+And then looping through them all, to update the location of each one, and checking if any one of them hit their target yet.
 
     bullets.forEach((current, i) => {
         current.sprite.x += (current.direction.x * (delta * 3));
@@ -308,10 +308,24 @@ And then looping through them all, to update the location of each one, and check
 
 ## Adding a mask
 
-This is really starting to look like something now, so I wanted to start on the finishing touches. Currently, the canvas is still square, but apparently with masks it's possible to hide that. And it turns out, yeah, that's a super easy thing to do. Took me like a minute to find and implement. I don't even have to add a new thing for it. Setting the `.mask` property of every object in my scene to the `backgroundgraphic` variable I still had around just does the trick. Done.
+This is really starting to look like something now, so I wanted to start on the finishing touches. Currently, the canvas is still square which means that the ships can get out of the green area. Apparently with [masks](https://pixijs.download/dev/docs/PIXI.MaskSystem.html) it's possible to hide that. And it turns out, yeah, that's a super easy thing to do. Took me like a minute to find and implement. I don't even have to add a new thing for it. Setting the `.mask` property of every object in my scene to the `backgroundgraphic` variable I still had around just does the trick. Done.
 
 ![demo](./spacewar-demo.mov)
 
 ## Consequences
 
 Can't have actions without consequences, currently while I do check if the bullets have hit the target, there's no consequence for a bullet hitting. For now, I'll make the hit ship disappear. This should also happen when the ship hits the sun in the middle of the circle. Since I already do distance checks for these cases, I can easily tack this onto the existing stuff. 
+
+## Wrapping up for now
+
+So, let's go back to the original plan: 
+1. Create a circular canvas - check
+1. Add an object in the middle of this canvas (the star) - check
+1. Add a spaceship object - check
+1. Add controls to the ship - check
+1. Add gravity to the star, and have this affect the spaceship - check
+
+There's even the working shooting in there now! I'm too proud of what I've done here, it's exactly what I wanted to create at the start of this post. It's not done though, I still haven't figured out how to do the rotation of the ships in a way that works with orbiting the sun. The hyperjump that was in the original Spacewar! is also still missing. But I've noticed that if I stay on one project for too long, I get lost in the details. It's probably best to let this cool down for a while and continue later. I've made a separate GitHub repo for my games in progress, the current state of the Spacewar! clone can be found [here](https://github.com/SoftwareTrinkets/games-in-progress/blob/main/spacewar/index.html) 
+
+In the end, I rewrote the keyboard interaction and removed the function I found earlier. It was a great tool along the way, but as my project evolved and changed I needed something different to keep it readable. 
+
