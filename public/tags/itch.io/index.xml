@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Itch.io on Software Trinkets</title>
+    <link>https://www.softwaretrinkets.nl/tags/itch.io/</link>
+    <description>Recent content in Itch.io on Software Trinkets</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 24 Dec 2022 11:09:49 +0100</lastBuildDate><atom:link href="https://www.softwaretrinkets.nl/tags/itch.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Publishing a game on Itch.io</title>
+      <link>https://www.softwaretrinkets.nl/posts/publishcuberun/</link>
+      <pubDate>Sat, 24 Dec 2022 11:09:49 +0100</pubDate>
+      
+      <guid>https://www.softwaretrinkets.nl/posts/publishcuberun/</guid>
+      <description>Introduction&gt; Introduction # In the last post I&amp;rsquo;ve made a small game, but what use is a game if no-one can play it? So in this post I&amp;rsquo;m going to document how to publish something like this.</description>
+    </item>
+    
+  </channel>
+</rss>

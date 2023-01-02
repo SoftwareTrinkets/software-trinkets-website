@@ -4,7 +4,106 @@
   
     
       <url>
-            <loc>https://softwaretrinkets.github.io/software-trinkets-website/</loc>
+            <loc>https://www.softwaretrinkets.nl/</loc>
+            <lastmod>2022-12-28T22:55:37+01:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://www.softwaretrinkets.nl/posts/</loc>
+            <lastmod>2022-12-28T22:55:37+01:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://www.softwaretrinkets.nl/tags/domain/</loc>
+            <lastmod>2022-12-28T22:55:37+01:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://www.softwaretrinkets.nl/tags/github-actions/</loc>
+            <lastmod>2022-12-28T22:55:37+01:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://www.softwaretrinkets.nl/tags/hugo/</loc>
+            <lastmod>2022-12-28T22:55:37+01:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://www.softwaretrinkets.nl/posts/publishsite/</loc>
+            <lastmod>2022-12-28T22:55:37+01:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://www.softwaretrinkets.nl/tags/</loc>
+            <lastmod>2022-12-28T22:55:37+01:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://www.softwaretrinkets.nl/tags/babylonjs/</loc>
+            <lastmod>2022-12-24T11:09:49+01:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://www.softwaretrinkets.nl/tags/game/</loc>
+            <lastmod>2022-12-24T11:09:49+01:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://www.softwaretrinkets.nl/tags/itch.io/</loc>
+            <lastmod>2022-12-24T11:09:49+01:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://www.softwaretrinkets.nl/posts/publishcuberun/</loc>
+            <lastmod>2022-12-24T11:09:49+01:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://www.softwaretrinkets.nl/posts/babylonjs/</loc>
             <lastmod>2022-12-13T08:46:50+01:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
@@ -13,7 +112,7 @@
   
     
       <url>
-            <loc>https://softwaretrinkets.github.io/software-trinkets-website/posts/</loc>
+            <loc>https://www.softwaretrinkets.nl/tags/playground/</loc>
             <lastmod>2022-12-13T08:46:50+01:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
@@ -22,52 +121,7 @@
   
     
       <url>
-            <loc>https://softwaretrinkets.github.io/software-trinkets-website/tags/babylonjs/</loc>
-            <lastmod>2022-12-13T08:46:50+01:00</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-      <url>
-            <loc>https://softwaretrinkets.github.io/software-trinkets-website/posts/babylonjs/</loc>
-            <lastmod>2022-12-13T08:46:50+01:00</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-      <url>
-            <loc>https://softwaretrinkets.github.io/software-trinkets-website/tags/game/</loc>
-            <lastmod>2022-12-13T08:46:50+01:00</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-      <url>
-            <loc>https://softwaretrinkets.github.io/software-trinkets-website/tags/playground/</loc>
-            <lastmod>2022-12-13T08:46:50+01:00</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-      <url>
-            <loc>https://softwaretrinkets.github.io/software-trinkets-website/tags/</loc>
-            <lastmod>2022-12-13T08:46:50+01:00</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-      <url>
-            <loc>https://softwaretrinkets.github.io/software-trinkets-website/posts/my-first-post/</loc>
+            <loc>https://www.softwaretrinkets.nl/posts/my-first-post/</loc>
             <lastmod>2022-12-11T18:28:37+01:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
@@ -76,7 +130,7 @@
   
     
       <url>
-            <loc>https://softwaretrinkets.github.io/software-trinkets-website/tags/go/</loc>
+            <loc>https://www.softwaretrinkets.nl/tags/go/</loc>
             <lastmod>2022-12-11T18:28:37+01:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
@@ -85,7 +139,7 @@
   
     
       <url>
-            <loc>https://softwaretrinkets.github.io/software-trinkets-website/tags/hugo/</loc>
+            <loc>https://www.softwaretrinkets.nl/plans/</loc>
             <lastmod>2022-12-11T18:28:37+01:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
@@ -94,8 +148,7 @@
   
     
       <url>
-            <loc>https://softwaretrinkets.github.io/software-trinkets-website/plans/</loc>
-            <lastmod>2022-12-11T18:28:37+01:00</lastmod>
+            <loc>https://www.softwaretrinkets.nl/authors/</loc>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -103,7 +156,7 @@
   
     
       <url>
-            <loc>https://softwaretrinkets.github.io/software-trinkets-website/authors/</loc>
+            <loc>https://www.softwaretrinkets.nl/categories/</loc>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -111,15 +164,7 @@
   
     
       <url>
-            <loc>https://softwaretrinkets.github.io/software-trinkets-website/categories/</loc>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-      <url>
-            <loc>https://softwaretrinkets.github.io/software-trinkets-website/series/</loc>
+            <loc>https://www.softwaretrinkets.nl/series/</loc>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
