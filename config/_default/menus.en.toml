@@ -20,6 +20,12 @@
   pageRef = "/plans"
   weight = 20
 
+[[main]]
+  identifier = "github"
+  pre = "github"
+  url = "https://github.com/SoftwareTrinkets/software-trinkets-website"
+  weight = 80
+
 #[[main]]
 #  name = "Tags"
 #  pageRef = "tags"

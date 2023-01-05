@@ -155,3 +155,16 @@ After about 5 hours, it updated and I had a bit of a confusing time figuring out
 
 GitHub also removed the url from its field when I came back to it again. However, after going to the url a few times, I could see that something was being hosted there. 
 I guess this just takes a while, after changing the `baseURL` again in the config.toml to my custom domain everything showed up as it should. 
+
+## Addendum, resolving issues with GitHub Pages forgetting the link to my custom URL
+
+I was experiencing some very weird behavior, where GitHub was forgetting my custom domain. I thought this was due to my DNS settings, but I didn't really get anything when I googled for the warning I got:
+
+![GitHubPages](ImproperlyConfigured.png)
+
+Then, when looking through the commits on the gh-pages branch I noticed it kept adding the CNAME file that has my domain in it, every time I would add the website URL again in the settings. Which is when I finally noticed that every time my automation ran, it would remove the CNAME file GitHub Pages adds. 
+And it's only then that I found the official documentation on [how to host on GitHub Pages with Hugo](https://gohugo.io/hosting-and-deployment/hosting-on-github/#use-a-custom-domain)... Woops?
+
+AND I think the error I keep seeing is because I've only set up www.softwaretrinkets.nl, and not softwaretrinkets.nl. I'm trying to set that up using the [documentation on apex domains](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain). In my DNS settings, I do not see `ALIAS` or `ANAME`. I'm trying to see if I can do this with just the `A`, since I think I misconfigured that in the beginning. I've added all the GitHub IP Addresses with one of those, but I left the www.@ in front of it. 
+
+After waiting a full day, it redirects softwaretrinkets.nl to www.softwaretrinkets.nl and the warning is also gone in the GitHub Pages settings. Huzzah! 
