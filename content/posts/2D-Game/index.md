@@ -1,6 +1,6 @@
 ---
 title: "Remaking 'Spacewar!' (the first video game from 1962) with PixiJS"
-date: 2022-12-30T15:00:08+01:00
+date: 2023-01-05T15:00:08+01:00
 ---
  
 ## A new game
