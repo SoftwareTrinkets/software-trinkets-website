@@ -1,10 +1,9 @@
 ---
-title: "Let's create another game"
+title: "Remaking 'Spacewar!' (the first video game from 1962) with PixiJS"
 date: 2022-12-30T15:00:08+01:00
-draft: true
 ---
  
-## The new game
+## A new game
 Okay, after the wild success of the first game getting 3 plays in the first day (probably my parents), it's time to ride this high and create a new one. After opening up a new BabylonJS playground I wasn't really feeling it. So I think I'll make this next one with [PixiJS](https://pixijs.com). 
 
 [From the PixiJS website](https://pixijs.io/guides/basics/what-pixijs-is.html): *"At its heart, PixiJS is a rendering system that uses WebGL (or optionally Canvas) to display images and other 2D visual content. It provides a full scene graph (a hierarchy of objects to render), and provides interaction support to enable handling click and touch events. It is a natural replacement for Flash in the modern HTML5 world, but provides better performance and pixel-level effects that go beyond what Flash could achieve. It is perfect for online games, educational content, interactive ads, data visualization... any web-based application where complex graphics are important. And coupled with technology such as Cordova and Electron, PixiJS apps can be distributed beyond the browser as mobile and desktop applications."* 
@@ -12,7 +11,7 @@ Okay, after the wild success of the first game getting 3 plays in the first day 
 Since PixiJS is a 2D rendering engine, it's going to have to be 2D. From the examples on the PixiJS website I get the impression that this engine lends itself well to making stuff that just looks crisp. Like, look at this demo https://pixijs.io/examples/#/demos-advanced/mouse-trail.js it just feels right, you know?
 
  ## Spacewar!
-When thinking of idea's I first though I'd make a platformer, inspired by one of my favorite games: Fancy Pants. However, it would take a lot of time to get something that would be as smooth as that. So my second idea was to do something inspired by [Spacewar!](https://en.wikipedia.org/wiki/Spacewar!), which is a circular space fighting game. It's also one of the or maybe even the first video game ever made. The wikipedia article is really worth a read if you're into video game history. 
+My initial idea was to make a platformer, inspired by one of my favorite games: Fancy Pants. However, it would take a lot of time to get something that would be as smooth as that. So my second idea was to do something inspired by [Spacewar!](https://en.wikipedia.org/wiki/Spacewar!), which is a circular space fighting game. It's also one of the or maybe even the first video game ever made. The wikipedia article is really worth a read if you're into video game history. 
 
 {{< figure
     src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Spacewar_screenshot.jpg"
@@ -20,7 +19,7 @@ When thinking of idea's I first though I'd make a platformer, inspired by one of
     caption="Spacewar! on the Computer History Museum's PDP-1 in 2007. Source: https://commons.wikimedia.org/wiki/File:Spacewar_screenshot.jpg"
     >}}
 
-I just think it's such a vibe. The exclamation point at the end of the name is just the cherry on top for me. Also, the fact that it has a circular screen is just very unique. It was the same kind they would use for radar. 
+I just think it's such a vibe. The exclamation point at the end of the name is just the cherry on top for me. Also, the fact that it has a circular screen is just very unique. The screen was the same kind they would use for radar. 
 
 ## What actually is 'Spacewar!'?
 
@@ -325,7 +324,7 @@ So, let's go back to the original plan:
 1. Add controls to the ship - check
 1. Add gravity to the star, and have this affect the spaceship - check
 
-There's even the working shooting in there now! I'm too proud of what I've done here, it's exactly what I wanted to create at the start of this post. It's not done though, I still haven't figured out how to do the rotation of the ships in a way that works with orbiting the sun. The hyperjump that was in the original Spacewar! is also still missing. But I've noticed that if I stay on one project for too long, I get lost in the details. It's probably best to let this cool down for a while and continue later. I've made a separate GitHub repo for my games in progress, the current state of the Spacewar! clone can be found [here](https://github.com/SoftwareTrinkets/games-in-progress/blob/main/spacewar/index.html) 
+There's even the working shooting in there now! I'm too proud of what I've done here, it's exactly what I wanted to create at the start of this post. It's not done though, I still haven't figured out how to do the rotation of the ships in a way that works with orbiting the sun. The hyperjump that was in the original Spacewar! is also still missing. But I've noticed that if I stay on one project for too long, I get lost in the details. It's probably best to let this cool down for a while and continue later. I've made a separate GitHub repo for my games in progress, the current state of the Spacewar! clone can be found [here](https://github.com/SoftwareTrinkets/games-in-progress/blob/main/spacewar/index.html). 
 
 In the end, I rewrote the keyboard interaction and removed the function I found earlier. It was a great tool along the way, but as my project evolved and changed I needed something different to keep it readable. 
 
