@@ -1,7 +1,6 @@
 ---
-title: "Finish Spacewar"
+title: "Finishing Spacewar!"
 date: 2023-01-14T21:07:14+01:00
-draft: true
 ---
 
 ## What's next
@@ -71,3 +70,13 @@ Next up is having a random chance that the ship will explode when using this. He
 ## Flair!
 
 Pazzaz! Hurrah! This is just for fun, adding some stars in the background, and trails following the ships and bullets. 
+
+Okay, so the stars are easy to add, they're just sprites, a bunch of them, very small in the same color as the big star in the middle. However, a trail was one of the hardest things to add. I could probably add it as particles, but it's been difficult (I had major trouble adding the particle system stuff from PixiJS, the suggested thing to do trails without it is to do rope physics stuff?). This chapter was supposed to be fun, not another technical challenge so I'm going to postpone the trails and maybe do that later, or not, who knows. Currently the flair is just the stars in the background. 
+
+## Slap it on Itch.io
+
+Bam, it's just there, it's currently out into the world. It's not really done, but it's playable and I noticed I was sort of dreading continuing with it for some weird reason. 
+
+<iframe frameborder="0" src="https://itch.io/embed/1886317" width="552" height="167"><a href="https://softwaretrinkets.itch.io/spacewar">Spacewar! by SoftwareTrinkets</a></iframe>
+
+Still though, I'm very proud of it! A very bare bones type of game with basically everything made from scratch. Cool stuff. You can find the source-code here if you want to add stuff, or just look around: https://github.com/SoftwareTrinkets/games-in-progress/blob/main/spacewar/index.html 

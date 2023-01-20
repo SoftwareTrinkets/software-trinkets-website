@@ -6,6 +6,8 @@ toc: false
 
 ## Future plans:
 
-* Publishing a game.
-* PixiJS.
-* ChatGPT - I've not worked with this yet, but I have once made a machine learning thing that was meant to generate Dutch Carnaval lyrics. So I'm wondering if all my work there is in vain and this might just be able to spit that out. 
+* ~~Publishing a game~~
+* ~~PixiJS~~
+* ChatGPT - I've not worked with this yet, but I have once made a machine learning thing that was meant to generate [Dutch Carnaval](https://en.wikipedia.org/wiki/Carnival#Netherlands) lyrics. So I'm wondering if all my work there is in vain and this might just be able to spit that out. 
+* Creating a successful iOS/Android app.
+* A puzzle game.
