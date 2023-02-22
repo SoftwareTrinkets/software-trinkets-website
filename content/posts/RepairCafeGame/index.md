@@ -1,6 +1,6 @@
 ---
 title: "Repair Cafe Game"
-date: 2023-01-20T19:12:45+01:00
+date: 2023-02-22T20:46:45+01:00
 draft: true
 ---
 
@@ -50,8 +50,27 @@ When first opening Godot, the first impression is great. You are immediately pro
 
 This is great, but I wanted to take on the challenge of starting a new project from scratch. I'm writing this now, a week later, and if you're starting up Godot thinking it'll be a good time poking around this engine. You're in for a big ol slap in the face. It might just be me, but I found this engine ruthless. 
 
+## Godot: Second impression
+
 First off, the different elements are a bit confusing. Nodes, Sprites, Area2D, ColorRect? It wasn't very clear to me what was what and what did what. 
-What was very convenient though was the ability to drag in images, they're automatically Sprites and get added to your scene. That was honestly good stuff. 
+What was very convenient though was the ability to drag in images, they're automatically Sprites and get added to your scene. And since Sprites seem to be the backbone of this whole thing, that was honestly good stuff. 
 
 Now, the idea was a puzzle game, so I figured I would start with snapping together sprites as a first mechanic. And boy, this was way more of a struggle than I expected. 
-The very first step, was to see if the mouse was over one of my sprites.... And it was just pain. 
+The very first step, was to see if the mouse was over one of my sprites.... And it was just pain. I've found a million ways to do this, but none of them worked. I wanted to stick to GDScript, since it seems like the kind of thing that'll pay off later. But wow, this took some persistence to continue with. 
+I had hoped that my dragging and dropping of puzzle pieces was such a basic idea that there would be something for this already. Unfortunately, no such luck. After too many hours of struggling I did manage to get something to work. If you're currently trying to get a similar mouse interaction working in Godot. Mine wasn't working because of the following things:
+
+1. **I had a random component in my scene that was blocking mouse input from coming through.**
+1. I didn't have it added to the right component.
+1. I didn't know about the signal system in Godot.
+
+Notice the first one in bold, that was the most important thing. For whatever reason, there was a component in my scene that was blocking mouse input from going through to the script I was working in. 
+
+![The culprit](Godot-2.png)
+
+This was set to `Stop` and was ruining my day.
+
+After that was sorted everything started working, my scripts did what they should have. I also found out about [signals in Godot](https://docs.godotengine.org/en/stable/getting_started/step_by_step/signals.html), which is basically event handling. You can have certain events call certain methods in scripts, which is a good time. You can also have that send extra parameters. 
+
+## Godot final impression: Pretty cool
+
+Honestly after I got over that first bump in the road, Godot was pretty cool to work with. Everything in there seems to have a lot of thought put into it. They also seem to not shy away from braking changes? Which is something you don't encounter a lot anymore. 
