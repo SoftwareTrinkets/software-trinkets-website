@@ -1,7 +1,6 @@
 ---
 title: "Repair Cafe Game"
 date: 2023-02-22T20:46:45+01:00
-draft: true
 ---
 
 ## Intro
